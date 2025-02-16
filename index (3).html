@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidix Pametni Staklenik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            color: white;
+            /* Change the background image here */
+            background-image: url("background.jpg"); /* Replace with your image path */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the background image */
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            display: inline-block; /* Center the container */
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .button {
+            padding: 15px 30px; /* Increased padding for larger buttons */
+            margin: 10px;
+            font-size: 1.2em; /* Increased font size */
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 10px;
+            transition: transform 0.2s ease-in-out, background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+        #content {
+            margin-top: 20px;
+            font-size: 1.2em;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            white-space: pre-line;
+        }
+        /* Add styles for images */
+        .image {
+            max-width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners for images */
+            margin-top: 20px; /* Space above the image */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vidix Pametni Staklenik</h1>
+        <!-- Example of adding an image -->
+        <img src="your-image.jpg" alt="Description of the image" class="image"> <!-- Replace 'your-image.jpg' with your image path -->
+        <div class="button-container">
+            <button class="button" onclick="changeContent('Sklop funkcionira tako da imamo 3 releja, 3 senzora, ventilator, LED svjetlo i pumpu za vodu.\nPumpa za vodu je spojena na relej, isto tako i ventilator i LED svjetlo.\nSva tri senzora su spojena na vidix.')">Pametni Staklenik</button>
+            <button class="button" onclick="changeContent('Kako radi: Ovaj sustav koristi senzore za praćenje uvjeta u stakleniku.')">Kako radi</button>
+            <button class="button" onclick="changeContent('Funkcija: Automatsko upravljanje uvjetima za rast biljaka.')">Funkcija</button>
+            <button class="button" onclick="changeContent('Korist: Povećava prinos i smanjuje potrebu za ručnim radom.')">Korist</button>
+            <button class="button" onclick="changeContent('Cemu sluzi: Održavanje optimalnih uvjeta za rast biljaka.')">Cemu sluzi</button>
+        </div>
+        <div id="content">Kliknite na gumb da promijenite ovaj tekst.</div>
+    </div>
+    
+    <script>
+        function changeContent(text) {
+            document.getElementById('content').innerText = text;
+        }
+    </script>
+</body>
+</html>
